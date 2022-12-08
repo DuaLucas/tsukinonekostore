@@ -1,0 +1,9 @@
+[
+    {"id":1, "nombre":"Remera Deku", "precio":3200, "cantidad": 1, "img": "./img/productos/reme-deku.png"},
+    {"id":2, "nombre":"Remera Ryuk", "precio":3200, "cantidad": 1, "img": "./img/productos/reme-ryuk.png"},
+    {"id":3, "nombre":"Remera Gyro Zeppeli", "precio":3200, "cantidad": 1, "img": "./img/productos/reme-gyro.png"},
+    {"id":4, "nombre":"Remera Kakashi", "precio":3200, "cantidad": 1, "img": "./img/productos/reme-kakashi.png"},
+    {"id":5, "nombre":"Remera Sailor Saturn", "precio":3200, "cantidad": 1, "img": "./img/productos/reme-sailor-saturn.png"},
+    {"id":6, "nombre":"Remera Satoru Gojo", "precio":3200, "cantidad": 1, "img": "./img/productos/reme-satoru-gojo.png"},
+    {"id":7, "nombre":"Remera Yuji Itadori", "precio":3200, "cantidad": 1, "img": "./img/productos/reme-yuji-itadori.png"}
+]

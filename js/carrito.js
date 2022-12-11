@@ -122,7 +122,7 @@ const formularioPago = () =>{
       </div>
       <div class="form-group col-sm-8">
         <label for="card-number">Numero de tarjeta</label>
-        <input id="card-number" type="number" class="form-control"  aria-label="Card Holder" maxlength="16" required>
+        <input id="card-number" type="number" class="form-control"  aria-label="Card Holder" maxlength="19" required>
       </div>
       <div class="form-group col-sm-4">
         <label for="cvc">Código de seguridad</label>

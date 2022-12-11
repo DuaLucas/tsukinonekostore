@@ -110,23 +110,23 @@ const formularioPago = () =>{
     <div class="row">
       <div class="form-group col-sm-7">
         <label for="card-holder">Nombre del titular</label>
-        <input id="card-holder" type="text" class="form-control"  aria-label="Card Holder" aria-describedby="basic-addon1" required>
+        <input id="card-holder" type="text" class="form-control"  aria-label="Card Holder" required>
       </div>
       <div class="form-group col-sm-5">
         <label for="">Fecha de expiración</label>
         <div class="input-group expiration-date">
-          <input type="number" class="form-control" placeholder="mm" aria-label="MM" aria-describedby="basic-addon1" v>
+          <input type="number" class="form-control" placeholder="mm" aria-label="MM" maxlength="2" required>
           <span class="date-separator">/</span>
-          <input type="number" class="form-control" placeholder="aa" aria-label="AA" aria-describedby="basic-addon1" required>
+          <input type="number" class="form-control" placeholder="aa" aria-label="AA" maxlength="2" required>
         </div>
       </div>
       <div class="form-group col-sm-8">
         <label for="card-number">Numero de tarjeta</label>
-        <input id="card-number" type="number" class="form-control"  aria-label="Card Holder" aria-describedby="basic-addon1" required>
+        <input id="card-number" type="number" class="form-control"  aria-label="Card Holder" maxlength="16" required>
       </div>
       <div class="form-group col-sm-4">
         <label for="cvc">Código de seguridad</label>
-        <input id="cvc" type="number" class="form-control" placeholder="cvc" aria-label="Card Holder" aria-describedby="basic-addon1" required>
+        <input id="cvc" type="number" class="form-control" placeholder="cvc" maxlength="3" required>
       </div>
       <div class="form-group col-sm-12" id="add-btn-pago">
       <button type="submit" id="btn-finalizar-compra" class="btn-button btn btn-pago">Realizar pago</button>

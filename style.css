@@ -45,6 +45,10 @@ nav .menu-nav li a.active {
 
 /* GRID PRODUCTOS */
 
+.grid-productos {
+    padding-top:150px;	
+}
+
 .grid-productos ul {
     display: flex;
     justify-content: space-between;

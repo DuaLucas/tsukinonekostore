@@ -10,6 +10,8 @@ const precioTotal = document.querySelector('#precio-total')
 const precioTotalCheckout = document.querySelector('#precio-total-checkout')
 const listaProductos = document.querySelector('#lista-productos')
 
+const obtenerTotal = () => carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0)
+
 
 // TOGGLE BOTON CARRITO
 
@@ -130,10 +132,14 @@ mostrarCantidadProductosCarrito()
 // PRECIO TOTAL
 
 const totalCarrito = ()=>{
-    let total = carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0) 
-    localStorage.setItem('total', total)    
-     precioTotal.innerText = total
-     precioTotalCheckout.innerText = total
+    const total = obtenerTotal()
+    localStorage.setItem('total', total)
+    if(precioTotal){
+        precioTotal.innerText = total
+    }
+    if(precioTotalCheckout){
+        precioTotalCheckout.innerText = total
+    }
  }
 
 

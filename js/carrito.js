@@ -15,8 +15,9 @@ productosCarrito()
 
 const productosCarritocheckout = ()=>{
 
-    if(carrito == ""){
-        listadoProductosCheckout.innerHTML = `<h4>Carrito vacio</h4>`
+    if(!carrito.length){
+        listadoProductosCheckout.innerHTML = `<h4>Carrito vacío</h4>`
+        botonesCheckoutCarrito.style.display = 'none'
     }else{
         listadoProductosCheckout.innerHTML = ''
         carrito.forEach(producto =>{
@@ -38,7 +39,6 @@ const productosCarritocheckout = ()=>{
             div.append(btnEliminarProducto)    
             listadoProductosCheckout.append(div)
         }) 
-        
         botonesCheckoutCarrito.style.display = 'flex'
     }
 

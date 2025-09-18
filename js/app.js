@@ -50,8 +50,10 @@ const gridProductos = async() =>{
                
     })
 }
- 
-gridProductos()
+
+if (listaProductos) {
+    gridProductos()
+}
 
 // AGREGAR AL CARRITO
 

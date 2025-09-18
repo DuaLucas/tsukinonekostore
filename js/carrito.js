@@ -97,13 +97,14 @@ vaciarCarritoCheckout.addEventListener('click',()=>{
 
 const formularioPago = () =>{
 
+  const totalActual = obtenerTotal()
   tituloCheckout.innerText = "Detalles de pago"
   listadoProductosCheckout.innerHTML = `
   <section class="payment-form dark">
   <div class="container">
 <form id="form-pagos" class="needs-validation" novalidate>
   <div class="products">
-    <div class="total">Total<span class="price">$${tablaTotal}</span></div>
+    <div class="total">Total<span class="price">$${totalActual}</span></div>
   </div>
   <div class="card-details">
     <h3 class="title">Detalles tarjeta de credito</h3>
@@ -137,6 +138,10 @@ const formularioPago = () =>{
 </div>
 </section>
   `
+  const totalCheckoutElement = document.querySelector('#precio-total-checkout')
+  if(totalCheckoutElement){
+    totalCheckoutElement.innerText = totalActual
+  }
   document.getElementById('form-pagos').addEventListener('submit', (event)=> {
     event.preventDefault()
 
@@ -204,8 +209,6 @@ const formularioFacturacion = ()=>{
 
 // CONFIGURACION EMAILJS
 
-let tablaTotal = carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0)
-
 const enviarEmail =()=>{
     emailjs.init('pBbzyhzn_XuFuuk_s')
 
@@ -222,8 +225,8 @@ const enviarEmail =()=>{
         ciudad : document.getElementById("inputCiudad").value,
         provincia : document.getElementById("inputProvincia").value,
         postal : document.getElementById("inputPostal").value,
-        tabla_total : tablaTotal,
-        
+        tabla_total : obtenerTotal(),
+
     }
 
     emailjs.send(serviceID, templateID, params).then((res)=>{

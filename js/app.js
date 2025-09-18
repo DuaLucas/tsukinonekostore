@@ -130,10 +130,12 @@ mostrarCantidadProductosCarrito()
 // PRECIO TOTAL
 
 const totalCarrito = ()=>{
-    let total = carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0) 
-    localStorage.setItem('total', total)    
+    let total = carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0)
+    localStorage.setItem('total', total)
      precioTotal.innerText = total
-     precioTotalCheckout.innerText = total
+     if (precioTotalCheckout) {
+         precioTotalCheckout.innerText = total
+     }
  }
 
 
